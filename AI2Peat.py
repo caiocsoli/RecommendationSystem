@@ -199,6 +199,8 @@ def scrapping2(driver):
             # this below is code that takes in input a paper name and scrapes it by extracting the citations
 
             papers_df.loc[papers_df['Paper_Name'] == Search, "Scrapped"] = "Yes"
+            # Save the DataFrame back to CSV
+            papers_df.to_csv(network_node_folder + network_node_filename, sep=';', index=False)
 
 
 
